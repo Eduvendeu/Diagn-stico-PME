@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico Financeiro Automatizado - PME Consulting | R$ 97</title>
+    <meta name="description" content="Descubra os problemas financeiros da sua empresa em minutos. Diagnóstico automatizado com recomendações acionáveis. Apenas R$ 97.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0a0e1f 0%, #1a0933 50%, #0a0e1f 100%);
+            color: #e0f7ff;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, rgba(10, 14, 31, 0.95) 0%, rgba(26, 9, 51, 0.95) 100%);
+            border-bottom: 2px solid rgba(0, 217, 255, 0.3);
+            padding: 30px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex: 1;
+        }
+
+        .logo-arrow {
+            width: 50px;
+            height: 50px;
+            flex-shrink: 0;
+        }
+
+        .logo-arrow svg {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 0 10px rgba(51, 165, 214, 0.4));
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .brand-text h2 {
+            font-size: 1.4em;
+            font-weight: 700;
+            background: linear-gradient(90deg, #33a5d6 0%, #00d9ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .brand-tagline {
+            font-size: 0.8em;
+            color: #00d9ff;
+            opacity: 0.8;
+            margin: 2px 0 0 0 !important;
+        }
+
+        .header-cta {
+            display: flex;
+            gap: 15px;
+            flex-shrink: 0;
+        }
+
+        .header-cta a {
+            background: linear-gradient(135deg, #00d9ff 0%, #39ff14 100%);
+            color: #0a0e1f;
+            padding: 10px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95em;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+            box-shadow: 0 0 15px rgba(0, 217, 255, 0.3);
+        }
+
+        .header-cta a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 25px rgba(0, 217, 255, 0.5);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #00d9ff 0%, #39ff14 50%, #ff006e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.4em;
+            color: #00d9ff;
+            margin-bottom: 30px;
+            text-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+        }
+
+        .cta-primary {
+            background: linear-gradient(135deg, #ff006e 0%, #ff6600 100%);
+            color: white;
+            border: 2px solid #ff006e;
+            padding: 16px 50px;
+            font-size: 1.2em;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+            box-shadow: 0 0 30px rgba(255, 0, 110, 0.4);
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 50px rgba(255, 0, 110, 0.6);
+        }
+
+        /* VALUE PROPS */
+        .value-props {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 80px 0;
+            padding: 0 20px;
+        }
+
+        .prop-card {
+            background: rgba(0, 217, 255, 0.05);
+            border: 2px solid rgba(0, 217, 255, 0.2);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .prop-card:hover {
+            border-color: #00d9ff;
+            box-shadow: 0 0 30px rgba(0, 217, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .prop-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .prop-card h3 {
+            color: #39ff14;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        .prop-card p {
+            color: #e0f7ff;
+            font-size: 0.95em;
+        }
+
+        /* FEATURES SECTION */
+        .features {
+            background: rgba(57, 255, 20, 0.05);
+            border: 2px solid rgba(57, 255, 20, 0.2);
+            border-radius: 12px;
+            padding: 60px 40px;
+            margin: 80px 0;
+        }
+
+        .features h2 {
+            color: #39ff14;
+            font-size: 2.2em;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .feature-item::before {
+            content: "✓";
+            color: #39ff14;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .feature-item span {
+            color: #e0f7ff;
+        }
+
+        /* HOW IT WORKS */
+        .how-it-works {
+            margin: 80px 0;
+            padding: 60px 20px;
+            background: rgba(157, 0, 255, 0.05);
+            border: 2px solid rgba(157, 0, 255, 0.2);
+            border-radius: 12px;
+        }
+
+        .how-it-works h2 {
+            color: #9d00ff;
+            font-size: 2.2em;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .step {
+            background: rgba(157, 0, 255, 0.1);
+            border-left: 4px solid #9d00ff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .step-number {
+            font-size: 2.5em;
+            color: #9d00ff;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .step h4 {
+            color: #00d9ff;
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            color: #e0f7ff;
+            font-size: 0.95em;
+        }
+
+        /* PRICING */
+        .pricing {
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.1) 0%, rgba(57, 255, 20, 0.1) 100%);
+            border: 2px solid rgba(0, 217, 255, 0.3);
+            border-radius: 12px;
+            padding: 60px 40px;
+            text-align: center;
+            margin: 80px 0;
+        }
+
+        .pricing h2 {
+            color: #00d9ff;
+            font-size: 2.2em;
+            margin-bottom: 30px;
+        }
+
+        .price-tag {
+            font-size: 3.5em;
+            color: #39ff14;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .price-subtext {
+            color: #00d9ff;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+
+        .guarantee {
+            background: rgba(0, 217, 255, 0.1);
+            border: 2px solid #00d9ff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            color: #00d9ff;
+        }
+
+        /* TESTIMONIALS */
+        .testimonials {
+            margin: 80px 0;
+            padding: 0 20px;
+        }
+
+        .testimonials h2 {
+            color: #ff006e;
+            font-size: 2.2em;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .testimonial {
+            background: rgba(255, 0, 110, 0.05);
+            border: 2px solid rgba(255, 0, 110, 0.2);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .testimonial-text {
+            color: #e0f7ff;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            color: #ff006e;
+            font-weight: 600;
+        }
+
+        /* FAQ */
+        .faq {
+            background: rgba(157, 0, 255, 0.05);
+            border: 2px solid rgba(157, 0, 255, 0.2);
+            border-radius: 12px;
+            padding: 60px 40px;
+            margin: 80px 0;
+        }
+
+        .faq h2 {
+            color: #9d00ff;
+            font-size: 2.2em;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(157, 0, 255, 0.2);
+            padding-bottom: 20px;
+        }
+
+        .faq-item h4 {
+            color: #00d9ff;
+            margin-bottom: 10px;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+
+        .faq-item p {
+            color: #e0f7ff;
+            display: none;
+        }
+
+        .faq-item.open p {
+            display: block;
+        }
+
+        /* AFFILIATE SECTION */
+        .affiliate-section {
+            background: linear-gradient(135deg, rgba(255, 102, 0, 0.1) 0%, rgba(255, 0, 153, 0.1) 100%);
+            border: 2px solid #ff6600;
+            border-radius: 12px;
+            padding: 60px 40px;
+            text-align: center;
+            margin: 80px 0;
+        }
+
+        .affiliate-section h2 {
+            color: #ff6600;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+
+        .affiliate-section p {
+            color: #e0f7ff;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .affiliate-link {
+            background: #ff6600;
+            color: #0a0e1f;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .affiliate-link:hover {
+            background: #ff7722;
+            transform: scale(1.05);
+        }
+
+        /* CTA BOTTOM */
+        .cta-bottom {
+            background: linear-gradient(135deg, #ff006e 0%, #ff6600 100%);
+            border-radius: 12px;
+            padding: 60px 40px;
+            text-align: center;
+            margin: 80px 0;
+            border: 2px solid rgba(255, 0, 110, 0.3);
+        }
+
+        .cta-bottom h2 {
+            color: white;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .cta-bottom p {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: rgba(10, 14, 31, 0.95);
+            border-top: 2px solid rgba(0, 217, 255, 0.2);
+            padding: 40px 20px;
+            text-align: center;
+            color: #00d9ff;
+            margin-top: 80px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #00d9ff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #39ff14;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            font-size: 0.9em;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1em;
+            }
+
+            header {
+                padding: 20px 0;
+            }
+
+            header .container {
+                flex-direction: column;
+                gap: 15px;
+                justify-content: center;
+            }
+
+            .header-brand {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .header-cta {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .header-cta a {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+
+            .price-tag {
+                font-size: 2.5em;
+            }
+
+            .brand-text h2 {
+                font-size: 1.2em;
+            }
+
+            .logo-arrow {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="header-brand">
+                <div class="logo-arrow">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Diagonal Arrow Line (upward trend) -->
+                        <line x1="20" y1="80" x2="80" y2="20" stroke="#33a5d6" stroke-width="6" stroke-linecap="round"/>
+                        <!-- Arrow Head -->
+                        <polygon points="80,20 68,35 78,28" fill="#33a5d6"/>
+                    </svg>
+                </div>
+                <div class="brand-text">
+                    <h2>PME Consulting</h2>
+                    <p class="brand-tagline">Gestão e Estratégia</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero container">
+        <h1>Diagnóstico Financeiro Automatizado</h1>
+        <p class="hero-subtitle">Descubra os problemas da sua empresa em MINUTOS</p>
+        <a href="#comprar" class="cta-primary">Comprar Agora - R$ 97</a>
+    </section>
+
+    <!-- VALUE PROPS -->
+    <section class="container">
+        <div class="value-props">
+            <div class="prop-card">
+                <div class="prop-icon">⏱️</div>
+                <h3>Resultado Imediato</h3>
+                <p>Receba seu diagnóstico financeiro em menos de 5 minutos após preencher o formulário</p>
+            </div>
+            <div class="prop-card">
+                <div class="prop-icon">🎯</div>
+                <h3>100% Assertivo</h3>
+                <p>Análise baseada em dados reais da sua empresa com recomendações específicas e acionáveis</p>
+            </div>
+            <div class="prop-card">
+                <div class="prop-icon">💰</div>
+                <h3>Economia Garantida</h3>
+                <p>Economize horas de consultoria cara. Obtenha insights profissionais por uma fração do preço</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features container">
+        <h2>O que você recebe:</h2>
+        <div class="features-grid">
+            <div class="feature-item"><span>Análise de 6 Pilares Financeiros</span></div>
+            <div class="feature-item"><span>Dashboard Interativo Completo</span></div>
+            <div class="feature-item"><span>Indicadores KPI Personalizados</span></div>
+            <div class="feature-item"><span>Recomendações Prioritárias</span></div>
+            <div class="feature-item"><span>Análise de Fluxo de Caixa</span></div>
+            <div class="feature-item"><span>Ciclo Operacional Detalhado</span></div>
+            <div class="feature-item"><span>Estrutura de Custos Mapeada</span></div>
+            <div class="feature-item"><span>Benchmarking vs Mercado</span></div>
+            <div class="feature-item"><span>Sugestões de Consultoria</span></div>
+            <div class="feature-item"><span>Contato com Especialista</span></div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works container">
+        <h2>Como funciona:</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h4>Compre</h4>
+                <p>Acesso instantâneo após pagamento no Hotmart</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h4>Preencha</h4>
+                <p>Insira dados financeiros da sua empresa (10 campos simples)</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h4>Receba</h4>
+                <p>Dashboard com análise profissional automatizada</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h4>Aja</h4>
+                <p>Implemente recomendações ou converse com nosso consultor</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials container">
+        <h2>O que dizem nossos clientes:</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial">
+                <div class="testimonial-text">"Consegui identificar um vazamento de caixa que não havia percebido. Economizou meses de consultoria."</div>
+                <div class="testimonial-author">— Marina G., Confeitaria</div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-text">"O dashboard é tão claro que consegui apresentar a situação financeira para minha equipe em 5 minutos."</div>
+                <div class="testimonial-author">— Carlos M., E-commerce</div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-text">"Recomendações práticas. Não é só teoria. Consegui implementar 3 ações ainda no mesmo mês."</div>
+                <div class="testimonial-author">— Amanda S., Agência Digital</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="pricing container">
+        <h2>Investimento Acessível</h2>
+        <div class="price-tag">R$ 97</div>
+        <p class="price-subtext">Pague uma única vez e tenha acesso ao diagnóstico completo</p>
+        <a href="#comprar" class="cta-primary">Comprar Agora</a>
+        <div class="guarantee">
+            ✓ Acesso imediato após compra<br>
+            ✓ Nenhuma assinatura recorrente<br>
+            ✓ Suporte por email e WhatsApp
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq container">
+        <h2>Perguntas Frequentes</h2>
+        <div class="faq-item open">
+            <h4>Como recebo acesso após comprar?</h4>
+            <p>Você recebe um link de acesso imediatamente após a compra no Hotmart. Clique no link, preencha os dados da sua empresa e receba seu diagnóstico em minutos.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Qual informação financeira preciso ter?</h4>
+            <p>Informações básicas: receita bruta, custos, despesas operacionais, dívidas, fluxo de caixa. Dados que você normalmente já tem em sua contabilidade ou planilhas.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Posso compartilhar com meu contador ou consultor?</h4>
+            <p>Sim! Você pode exportar o dashboard ou compartilhar a análise com sua equipe financeira. Ideal para levar a um consultor para implementação.</p>
+        </div>
+        <div class="faq-item">
+            <h4>E se eu quiser uma consultoria mais profunda?</h4>
+            <p>Depois do diagnóstico, você terá contato direto conosco via WhatsApp ou email. Podemos conversar sobre pacotes de consultoria personalizados.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Tem garantia de satisfação?</h4>
+            <p>Se não ficar satisfeito, você tem 7 dias para solicitar reembolso. Sem perguntas. Acreditamos na qualidade do nosso produto.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Vou receber spam ou ligações?</h4>
+            <p>Não. Respeitamos sua privacidade. Você só será contatado se clicar para falar com um especialista no dashboard.</p>
+        </div>
+    </section>
+
+<!-- CTA BOTTOM -->
+    <section class="cta-bottom container" id="comprar">
+        <h2>Pronto para transformar seus resultados?</h2>
+        <p>Seu diagnóstico financeiro profissional começa agora</p>
+        <a href="https://hotmart.com/pt-br" class="cta-primary">Comprar no Hotmart - R$ 97</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 PME Consulting. Todos os direitos reservados.</p>
+        <p>Desenvolvido para PMEs brasileiras | Gestão e Estratégia Financeira</p>
+        <div class="footer-links">
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Termos de Uso</a>
+            <a href="mailto:luiz.ferreira@pme-partners.com.br">Contato</a>
+            <a href="https://wa.me/5511993504343">WhatsApp</a>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-item h4').forEach(h4 => {
+            h4.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && href !== '#comprar' && href !== '#affiliate') {
+                    return;
+                }
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
